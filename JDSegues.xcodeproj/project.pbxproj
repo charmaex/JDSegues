@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		13B4470C1D735F53002CDAE1 /* JDSegues.h in Headers */ = {isa = PBXBuildFile; fileRef = 13B4470B1D735F53002CDAE1 /* JDSegues.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13B447141D735F6F002CDAE1 /* JDScaleInSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B447131D735F6F002CDAE1 /* JDScaleInSegue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		13B447081D735F53002CDAE1 /* JDSegues.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JDSegues.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B4470B1D735F53002CDAE1 /* JDSegues.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDSegues.h; sourceTree = "<group>"; };
 		13B4470D1D735F53002CDAE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13B447131D735F6F002CDAE1 /* JDScaleInSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDScaleInSegue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,10 +48,19 @@
 		13B4470A1D735F53002CDAE1 /* JDSegues */ = {
 			isa = PBXGroup;
 			children = (
+				13B447151D735F72002CDAE1 /* Segues */,
 				13B4470B1D735F53002CDAE1 /* JDSegues.h */,
 				13B4470D1D735F53002CDAE1 /* Info.plist */,
 			);
 			path = JDSegues;
+			sourceTree = "<group>";
+		};
+		13B447151D735F72002CDAE1 /* Segues */ = {
+			isa = PBXGroup;
+			children = (
+				13B447131D735F6F002CDAE1 /* JDScaleInSegue.swift */,
+			);
+			name = Segues;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13B447141D735F6F002CDAE1 /* JDScaleInSegue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +242,7 @@
 		13B447111D735F53002CDAE1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -240,12 +253,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.jandamm.JDSegues;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		13B447121D735F53002CDAE1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
