@@ -2,23 +2,28 @@
 //  JDScaleInSegue.swift
 //  JDSegues
 //
-//  Created by PJ Vea on 8/4/15.
-//  Copyright © 2015 Vea Software. All rights reserved.
+//  Created by Jan Dammshäuser on 28.08.16.
+//  Copyright © 2016 Jan Dammshäuser. All rights reserved.
 //
 
 import UIKit
 
-class JDScaleInSegue: UIStoryboardSegue {
+/**
+ Lorem ipsum dolor sit amet.
+ 
+ - parameter Consectetur adipisicing elit.
+ 
+ - returns: Sed do eiusmod tempor.
+ */
+@objc public class JDScaleInSegue: UIStoryboardSegue {
     
-    private var centerPoint: CGPoint?
+    public var animationCenterPoint: CGPoint?
     
-    convenience init(identifier: String?, source: UIViewController, destination: UIViewController, point: CGPoint) {
-        self.init(identifier: identifier, source: source, destination: destination)
-        
-        centerPoint = point
-    }
+    public var transitionTime: NSTimeInterval = 0.5
     
-    override func perform() {
+    public var transitionDelay: NSTimeInterval = 0
+    
+    public override func perform() {
         let sourceVC = self.sourceViewController
         let destinationVC = self.destinationViewController
         let destCenter = sourceVC.view.center
@@ -26,7 +31,7 @@ class JDScaleInSegue: UIStoryboardSegue {
         
         destinationVC.view.frame = sourceVC.view.frame
         
-        if let center = centerPoint {
+        if let center = animationCenterPoint {
             destinationVC.view.center = center
         }
         
@@ -34,9 +39,9 @@ class JDScaleInSegue: UIStoryboardSegue {
         
         destinationVC.view.transform = CGAffineTransformMakeScale(0.05, 0.05)
         
-        UIView.animateWithDuration(0.5, delay: 0.0, options: .CurveEaseInOut, animations: { () -> Void in
+        UIView.animateWithDuration(transitionTime, delay: transitionDelay, options: .CurveEaseInOut, animations: { () -> Void in
             
-            destinationVC.view.transform = CGAffineTransformMakeScale(1.0, 1.0)
+            destinationVC.view.transform = CGAffineTransformMakeScale(1, 1)
             destinationVC.view.center = destCenter
             
             }) { (finished) -> Void in
