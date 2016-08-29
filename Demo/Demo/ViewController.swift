@@ -12,7 +12,7 @@ import JDSegues
 class ViewController: UIViewController {
 
     @IBAction func upperBtn(sender: UIButton) {
-        performSegueWithIdentifier(Segues.ScaleIn.rawValue, sender: self)
+        performSegueWithIdentifier(Segues.ScaleIn.rawValue, sender: sender)
     }
 
     @IBAction func lowerBtn(sender: UIButton) {
@@ -21,8 +21,16 @@ class ViewController: UIViewController {
         let segue = JDSegueScaleIn(identifier: nil, source: self, destination: nextVC)
         
         segue.animationCenterPoint = sender.center
+        segue.transitionDelay = 1
+        segue.transitionTime = 2
         
         segue.perform()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let segue = segue as? JDSegueScaleIn, let sender = sender as? UIView {
+            segue.animationCenterPoint = sender.center
+        }
     }
     
 }
