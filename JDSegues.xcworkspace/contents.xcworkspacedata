@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:JDSegues.podspec">
+   </FileRef>
+   <FileRef
       location = "group:JDSegues.xcodeproj">
    </FileRef>
    <FileRef
