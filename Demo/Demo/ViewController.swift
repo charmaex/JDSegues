@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         
         let segue = JDSegueScaleIn(identifier: nil, source: self, destination: nextVC)
         
-        segue.animationCenterPoint = sender.center
+        segue.animationOrigin = sender.center
         segue.transitionDelay = 1
         segue.transitionTime = 2
         
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if let segue = segue as? JDSegueScaleIn, let sender = sender as? UIView {
-            segue.animationCenterPoint = sender.center
+            segue.animationOrigin = sender.center
         }
     }
     

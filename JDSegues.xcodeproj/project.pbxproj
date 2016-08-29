@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13706F881D744981000903D8 /* JDSegueDelayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13706F871D744981000903D8 /* JDSegueDelayable.swift */; };
+		13706F8A1D744CE5000903D8 /* JDSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13706F891D744CE5000903D8 /* JDSegue.swift */; };
+		13706F8C1D744EE8000903D8 /* JDSegueOriginable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13706F8B1D744EE8000903D8 /* JDSegueOriginable.swift */; };
 		13B4470C1D735F53002CDAE1 /* JDSegues.h in Headers */ = {isa = PBXBuildFile; fileRef = 13B4470B1D735F53002CDAE1 /* JDSegues.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13B447141D735F6F002CDAE1 /* JDSegueScaleIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B447131D735F6F002CDAE1 /* JDSegueScaleIn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13706F871D744981000903D8 /* JDSegueDelayable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDSegueDelayable.swift; sourceTree = "<group>"; };
+		13706F891D744CE5000903D8 /* JDSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDSegue.swift; sourceTree = "<group>"; };
+		13706F8B1D744EE8000903D8 /* JDSegueOriginable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDSegueOriginable.swift; sourceTree = "<group>"; };
 		13B447081D735F53002CDAE1 /* JDSegues.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JDSegues.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B4470B1D735F53002CDAE1 /* JDSegues.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDSegues.h; sourceTree = "<group>"; };
 		13B4470D1D735F53002CDAE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -29,6 +35,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13706F861D74495C000903D8 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				13706F891D744CE5000903D8 /* JDSegue.swift */,
+				13706F871D744981000903D8 /* JDSegueDelayable.swift */,
+				13706F8B1D744EE8000903D8 /* JDSegueOriginable.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
 		13B446FE1D735F53002CDAE1 = {
 			isa = PBXGroup;
 			children = (
@@ -48,6 +64,7 @@
 		13B4470A1D735F53002CDAE1 /* JDSegues */ = {
 			isa = PBXGroup;
 			children = (
+				13706F861D74495C000903D8 /* Protocols */,
 				13B447151D735F72002CDAE1 /* Segues */,
 				13B4470B1D735F53002CDAE1 /* JDSegues.h */,
 				13B4470D1D735F53002CDAE1 /* Info.plist */,
@@ -142,6 +159,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B447141D735F6F002CDAE1 /* JDSegueScaleIn.swift in Sources */,
+				13706F8C1D744EE8000903D8 /* JDSegueOriginable.swift in Sources */,
+				13706F8A1D744CE5000903D8 /* JDSegue.swift in Sources */,
+				13706F881D744981000903D8 /* JDSegueDelayable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,18 +8,17 @@
 
 import UIKit
 
-
 /// Segue that scales in from a point or the center of the screen.
 @objc
-public class JDSegueScaleIn: UIStoryboardSegue {
+public class JDSegueScaleIn: UIStoryboardSegue, JDSegueDelayable, JDSegueOriginable {
     
     /// Defines at which point the animation should start
     /// - parameter Default: center of the screen
-    public var animationCenterPoint: CGPoint?
+    public var animationOrigin: CGPoint?
     
     /// Time the transition animation takes
     /// - parameter Default: 0.5 seconds
-    public var transitionTime: NSTimeInterval = 0.5
+     public var transitionTime: NSTimeInterval = 0.5
     
     /// Time the transition animation is delayed after calling
     /// - parameter Default: 0 seconds
@@ -39,13 +38,11 @@ public class JDSegueScaleIn: UIStoryboardSegue {
         
         destinationVC.view.transform = CGAffineTransformMakeScale(0.05, 0.05)
         
-        if let center = animationCenterPoint {
+        if let center = animationOrigin {
             destinationVC.view.center = center
         }
         
-        let delayTime: dispatch_time_t = dispatch_time(DISPATCH_TIME_NOW, Int64(transitionDelay * Double(NSEC_PER_SEC)))
-        dispatch_after(delayTime, dispatch_get_main_queue(), {
-            
+        delay() {
             sourceVC.view.addSubview(destinationVC.view)
             
             UIView.animateWithDuration(self.transitionTime, delay: 0, options: self.animationOption, animations: {
@@ -56,8 +53,6 @@ public class JDSegueScaleIn: UIStoryboardSegue {
             }) { finished in
                 sourceVC.presentViewController(destinationVC, animated: false, completion: nil)
             }
-            
-        })
-        
+        }
     }
 }
