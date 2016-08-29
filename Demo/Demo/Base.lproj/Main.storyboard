@@ -41,7 +41,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="DeF-EH-kbc" kind="custom" identifier="ScaleIn" customClass="JDSegueScaleIn" id="pBs-UE-iBA"/>
+                        <segue destination="DeF-EH-kbc" kind="custom" identifier="ScaleIn" customClass="JDSegueScaleIn" customModule="JDSegues" id="pBs-UE-iBA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
