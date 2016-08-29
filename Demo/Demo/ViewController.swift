@@ -7,19 +7,23 @@
 //
 
 import UIKit
+import JDSegues
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBAction func upperBtn(sender: UIButton) {
+        performSegueWithIdentifier(Segues.ScaleIn.rawValue, sender: self)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func lowerBtn(sender: UIButton) {
+        let nextVC = SecondViewController()
+        
+        let segue = JDSegueScaleIn(identifier: nil, source: self, destination: nextVC)
+        
+        segue.animationCenterPoint = sender.center
+        
+        segue.perform()
     }
-
-
+    
 }
 

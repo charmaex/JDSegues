@@ -1,5 +1,5 @@
 //
-//  JDScaleInSegue.swift
+//  JDSegueScaleIn.swift
 //  JDSegues
 //
 //  Created by Jan Dammshäuser on 28.08.16.
@@ -15,8 +15,13 @@ import UIKit
  
  - returns: Sed do eiusmod tempor.
  */
-@objc public class JDScaleInSegue: UIStoryboardSegue {
+@objc
+public class JDSegueScaleIn: UIStoryboardSegue {
     
+    /**
+     Defines at which point the animation should start.
+     Defaults to center of the screen.
+    */
     public var animationCenterPoint: CGPoint?
     
     public var transitionTime: NSTimeInterval = 0.5
