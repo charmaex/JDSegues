@@ -32,7 +32,6 @@ public class JDSegueScaleOut: UIStoryboardSegue, JDSegueDelayable, JDSegueOrigin
     public override func perform() {
         let sourceVC = self.sourceViewController
         let destinationVC = self.destinationViewController
-        let destCenter = sourceVC.view.center
         
         destinationVC.view.frame = sourceVC.view.frame
         
