@@ -8,7 +8,7 @@
 
 import UIKit
 
-/// Segue that scales out to the center of the screen.
+/// Segue where the current screen scales out to a point or the center of the screen.
 @objc
 public class JDSegueScaleOut: UIStoryboardSegue, JDSegueDelayable, JDSegueOriginable {
     
@@ -30,10 +30,10 @@ public class JDSegueScaleOut: UIStoryboardSegue, JDSegueDelayable, JDSegueOrigin
     
     
     public override func perform() {
-        let sourceVC = self.sourceViewController
-        let destinationVC = self.destinationViewController
+        let sourceVC = sourceViewController
+        let destinationVC = destinationViewController
         
-        destinationVC.view.frame = sourceVC.view.frame
+        setupScreens()
         
         delay() {
             sourceVC.view.window!.insertSubview(destinationVC.view, belowSubview: sourceVC.view)
@@ -48,7 +48,7 @@ public class JDSegueScaleOut: UIStoryboardSegue, JDSegueDelayable, JDSegueOrigin
                 
             }) { finished in
                 
-                sourceVC.presentViewController(destinationVC, animated: false) {
+                self.finishSegue() {
                     sourceVC.view.transform = CGAffineTransformMakeScale(1, 1)
                 }
             }

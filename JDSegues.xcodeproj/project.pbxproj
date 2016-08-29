@@ -11,6 +11,7 @@
 		13706F8A1D744CE5000903D8 /* JDSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13706F891D744CE5000903D8 /* JDSegue.swift */; };
 		13706F8C1D744EE8000903D8 /* JDSegueOriginable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13706F8B1D744EE8000903D8 /* JDSegueOriginable.swift */; };
 		13706F8E1D745340000903D8 /* JDSegueScaleOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13706F8D1D745340000903D8 /* JDSegueScaleOut.swift */; };
+		13706F901D7482DD000903D8 /* JDSegueSlideFromX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13706F8F1D7482DD000903D8 /* JDSegueSlideFromX.swift */; };
 		13B4470C1D735F53002CDAE1 /* JDSegues.h in Headers */ = {isa = PBXBuildFile; fileRef = 13B4470B1D735F53002CDAE1 /* JDSegues.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13B447141D735F6F002CDAE1 /* JDSegueScaleIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B447131D735F6F002CDAE1 /* JDSegueScaleIn.swift */; };
 /* End PBXBuildFile section */
@@ -20,6 +21,7 @@
 		13706F891D744CE5000903D8 /* JDSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDSegue.swift; sourceTree = "<group>"; };
 		13706F8B1D744EE8000903D8 /* JDSegueOriginable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDSegueOriginable.swift; sourceTree = "<group>"; };
 		13706F8D1D745340000903D8 /* JDSegueScaleOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDSegueScaleOut.swift; sourceTree = "<group>"; };
+		13706F8F1D7482DD000903D8 /* JDSegueSlideFromX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDSegueSlideFromX.swift; sourceTree = "<group>"; };
 		13B447081D735F53002CDAE1 /* JDSegues.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JDSegues.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B4470B1D735F53002CDAE1 /* JDSegues.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JDSegues.h; sourceTree = "<group>"; };
 		13B4470D1D735F53002CDAE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			children = (
 				13B447131D735F6F002CDAE1 /* JDSegueScaleIn.swift */,
 				13706F8D1D745340000903D8 /* JDSegueScaleOut.swift */,
+				13706F8F1D7482DD000903D8 /* JDSegueSlideFromX.swift */,
 			);
 			name = Segues;
 			sourceTree = "<group>";
@@ -163,6 +166,7 @@
 			files = (
 				13B447141D735F6F002CDAE1 /* JDSegueScaleIn.swift in Sources */,
 				13706F8C1D744EE8000903D8 /* JDSegueOriginable.swift in Sources */,
+				13706F901D7482DD000903D8 /* JDSegueSlideFromX.swift in Sources */,
 				13706F8A1D744CE5000903D8 /* JDSegue.swift in Sources */,
 				13706F8E1D745340000903D8 /* JDSegueScaleOut.swift in Sources */,
 				13706F881D744981000903D8 /* JDSegueDelayable.swift in Sources */,

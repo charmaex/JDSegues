@@ -8,7 +8,7 @@
 
 import UIKit
 
-/// Segue that scales in from a point or the center of the screen.
+/// Segue where the next screen scales in from a point or the center of the screen.
 @objc
 public class JDSegueScaleIn: UIStoryboardSegue, JDSegueDelayable, JDSegueOriginable {
     
@@ -30,11 +30,11 @@ public class JDSegueScaleIn: UIStoryboardSegue, JDSegueDelayable, JDSegueOrigina
     
     
     public override func perform() {
-        let sourceVC = self.sourceViewController
-        let destinationVC = self.destinationViewController
+        let sourceVC = sourceViewController
+        let destinationVC = destinationViewController
         let destCenter = sourceVC.view.center
         
-        destinationVC.view.frame = sourceVC.view.frame
+        setupScreens()
         
         destinationVC.view.transform = CGAffineTransformMakeScale(0.05, 0.05)
         
@@ -51,7 +51,7 @@ public class JDSegueScaleIn: UIStoryboardSegue, JDSegueDelayable, JDSegueOrigina
                 destinationVC.view.center = destCenter
                 
             }) { finished in
-                sourceVC.presentViewController(destinationVC, animated: false, completion: nil)
+                self.finishSegue(nil)
             }
         }
     }
